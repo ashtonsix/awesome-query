@@ -1,0 +1,29 @@
+{
+  "name": "awesome-query",
+  "version": "0.0.0",
+  "description": "Query awesome lists.",
+  "main": "index.js",
+  "dependencies": {
+    "yargs": "^3.10.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashtonwar/awesome-query.git"
+  },
+  "keywords": [
+    "search",
+    "spider",
+    "awesome",
+    "awesome",
+    "list",
+    "query",
+    "phantomjs"
+  ],
+  "author": "Ashton War <me@ashtonwar.com> (http://ashtonwar.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashtonwar/awesome-query/issues"
+  },
+  "homepage": "https://github.com/ashtonwar/awesome-query#readme"
+}

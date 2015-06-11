@@ -1,0 +1,160 @@
+0 of 132 URLs checked, 0 timed out.1 of 132 URLs checked, 0 timed out.2 of 132 URLs checked, 0 timed out.3 of 132 URLs checked, 0 timed out.4 of 132 URLs checked, 0 timed out.5 of 132 URLs checked, 0 timed out.6 of 132 URLs checked, 0 timed out.7 of 132 URLs checked, 0 timed out.8 of 132 URLs checked, 0 timed out.9 of 132 URLs checked, 0 timed out.10 of 132 URLs checked, 0 timed out.https://github.com/sindresorhus/awesome failed, retrying (1 attempts left)
+https://twitter.com/brittanystoroz/confs-and-meetups/ failed, retrying (1 attempts left)
+https://modelviewculture.com/pieces/unlocking-the-invisible-elevator-accessibility-at-tech-conferences failed, retrying (1 attempts left)
+http://modelviewculture.com/ failed, retrying (1 attempts left)
+http://backboneconf.com/ failed, retrying (1 attempts left)
+http://cssconf.com failed, retrying (1 attempts left)
+http://www.futureinsights.com/ failed, retrying (1 attempts left)
+http://jscoderetreat.com/ failed, retrying (1 attempts left)
+http://jsfest.com/ failed, retrying (1 attempts left)
+http://medellinjs.org/ failed, retrying (1 attempts left)
+http://openvisconf.com/ failed, retrying (1 attempts left)
+https://github.com/papers-we-love/papers-we-love failed, retrying (1 attempts left)
+http://sciencehackday.org/ failed, retrying (1 attempts left)
+https://www.webrebels.org/ failed, retrying (1 attempts left)
+http://www.bangbangcon.com failed, retrying (1 attempts left)
+http://www.alterconf.com/ failed, retrying (1 attempts left)
+http://cakefest.org failed, retrying (1 attempts left)
+http://cascadiajs.com failed, retrying (1 attempts left)
+http://clojure-conj.org/ failed, retrying (1 attempts left)
+http://cssconfoak.land/ failed, retrying (1 attempts left)
+http://CSSdevconf.com/ failed, retrying (1 attempts left)
+http://dancejs.io/ failed, retrying (1 attempts left)
+http://www.djangocon.us/ failed, retrying (1 attempts left)
+https://edgeconf.com failed, retrying (1 attempts left)
+http://emberconf.com/ failed, retrying (1 attempts left)
+http://forwardjs.com/ failed, retrying (1 attempts left)
+https://2014.foss4g.org/ failed, retrying (1 attempts left)
+http://geospatialcanada.wbresearch.com/ failed, retrying (1 attempts left)
+https://www.google.com/events/io failed, retrying (1 attempts left)
+http://html5devconf.com/ failed, retrying (1 attempts left)
+https://www.oracle.com/javaone failed, retrying (1 attempts left)
+http://events.jquery.org/2014/chicago/ failed, retrying (1 attempts left)
+http://jsconf.com failed, retrying (1 attempts left)
+http://2015.jsconf.us/ failed, retrying (1 attempts left)
+http://www.degoesconsulting.com/lambdaconf-2015/ failed, retrying (1 attempts left)
+http://midwestjs.com/ failed, retrying (1 attempts left)
+http://ncdevcon.com/ failed, retrying (1 attempts left)
+http://nejsconf.com/ failed, retrying (1 attempts left)
+http://www.ng-conf.org/ failed, retrying (1 attempts left)
+http://nodeconf.com/ failed, retrying (1 attempts left)
+https://twitter.com/NodeSummit failed, retrying (1 attempts left)
+http://nodevember.org/ failed, retrying (1 attempts left)
+http://fluentconf.com failed, retrying (1 attempts left)
+http://strataconf.com/ failed, retrying (1 attempts left)
+http://oaklandjs.com/ failed, retrying (1 attempts left)
+http://www.openwest.org/ failed, retrying (1 attempts left)
+http://www.oscon.com/open-source-2015 failed, retrying (1 attempts left)
+http://us.pycon.org/ failed, retrying (1 attempts left)
+http://realtimeconf.com/ failed, retrying (1 attempts left)
+http://rubyconf.org/ failed, retrying (1 attempts left)
+http://sassconf.com/ failed, retrying (1 attempts left)
+http://spacecityjs.com/ failed, retrying (1 attempts left)
+https://thestrangeloop.com/ failed, retrying (1 attempts left)
+http://www.transhack.org/events/ failed, retrying (1 attempts left)
+http://texasjavascript.com failed, retrying (1 attempts left)
+http://2014.xoxofest.com/ failed, retrying (1 attempts left)
+http://brooklynjs.com/ failed, retrying (1 attempts left)
+http://empirejs.org failed, retrying (1 attempts left)
+http://empirenode.org/ failed, retrying (1 attempts left)
+http://manhattanjs.com/ failed, retrying (1 attempts left)
+http://www.meetup.com/QueensJS/ failed, retrying (1 attempts left)
+http://braziljs.com.br/ failed, retrying (1 attempts left)
+http://www.frontinaracaju.com.br/ failed, retrying (1 attempts left)
+http://frontinbh.com.br/ failed, retrying (1 attempts left)
+http://frontinfloripa.com.br/ failed, retrying (1 attempts left)
+http://frontinmaceio.com.br/ failed, retrying (1 attempts left)
+http://frontinrecife.com.br/ failed, retrying (1 attempts left)
+http://www.frontinsampa.com.br/ failed, retrying (1 attempts left)
+http://www.frontinterior.com.br/ failed, retrying (1 attempts left)
+http://www.jsconfar.com/ failed, retrying (1 attempts left)
+http://jsconfbr.org failed, retrying (1 attempts left)
+http://jsconf.co/ failed, retrying (1 attempts left)
+http://jsconf.uy/ failed, retrying (1 attempts left)
+http://2014.pythonbrasil.org.br/ failed, retrying (1 attempts left)
+http://uy.pycon.org failed, retrying (1 attempts left)
+http://riojs.org/ failed, retrying (1 attempts left)
+http://rubyconfargentina.org/ failed, retrying (1 attempts left)
+http://www.rubyconf.com.br/ failed, retrying (1 attempts left)
+http://tableless.com.br/tablelessconf/ failed, retrying (1 attempts left)
+http://beyondtellerrand.com failed, retrying (1 attempts left)
+http://greatbritishnodeconf.co.uk/ failed, retrying (1 attempts left)
+http://coldfrontconf.com/ failed, retrying (1 attempts left)
+http://copenhagenjs.dk/ failed, retrying (1 attempts left)
+http://www.cornerstone.se/ failed, retrying (1 attempts left)
+http://craft-conf.com/2015 failed, retrying (1 attempts left)
+http://cssconf.eu failed, retrying (1 attempts left)
+http://decentralizecamp.com/ failed, retrying (1 attempts left)
+http://www.devoxx.com/ failed, retrying (1 attempts left)
+http://www.dotcss.io/ failed, retrying (1 attempts left)
+http://www.dotgo.io/ failed, retrying (1 attempts left)
+http://www.dotjs.io/ failed, retrying (1 attempts left)
+http://www.dotscale.io/ failed, retrying (1 attempts left)
+http://www.dotswift.io/ failed, retrying (1 attempts left)
+https://emberfest.eu/ failed, retrying (1 attempts left)
+https://fosdem.org/2015/ failed, retrying (1 attempts left)
+http://front-trends.com/ failed, retrying (1 attempts left)
+http://www.fullstackfest.com/ failed, retrying (1 attempts left)
+http://javazone.no failed, retrying (1 attempts left)
+http://2014.jsday.it/ failed, retrying (1 attempts left)
+http://jsconfbp.com/ failed, retrying (1 attempts left)
+http://2015.jsconf.eu/ failed, retrying (1 attempts left)
+http://jsist.org/ failed, retrying (1 attempts left)
+http://2015.jsunconf.eu/ failed, retrying (1 attempts left)
+http://lxjs.org failed, retrying (1 attempts left)
+http://moscowjs.ru/ failed, retrying (1 attempts left)
+http://www.munichjs.org/ failed, retrying (1 attempts left)
+http://ngeurope.org/ failed, retrying (1 attempts left)
+http://nodeconfeu.com/ failed, retrying (1 attempts left)
+http://www.react-europe.org failed, retrying (1 attempts left)
+http://realtimeconf.eu/ failed, retrying (1 attempts left)
+http://rejectjs.org/ failed, retrying (1 attempts left)
+http://rubyslava.sk/english.html failed, retrying (1 attempts left)
+http://scotlandjs.com/ failed, retrying (1 attempts left)
+http://www.webexpo.cz/ failed, retrying (1 attempts left)
+http://jsconf.cn failed, retrying (1 attempts left)
+http://jsconf.asia failed, retrying (1 attempts left)
+http://jsdc.tw/ failed, retrying (1 attempts left)
+https://jsfoo.in/ failed, retrying (1 attempts left)
+http://www.nodeconf.in/ failed, retrying (1 attempts left)
+http://campjs.com/ failed, retrying (1 attempts left)
+http://cssconf.com.au failed, retrying (1 attempts left)
+http://au.jsconf.com/ failed, retrying (1 attempts left)
+11 of 132 URLs checked, 0 timed out.12 of 132 URLs checked, 0 timed out.12 of 132 URLs checked, 1 timed out.12 of 132 URLs checked, 2 timed out.12 of 132 URLs checked, 3 timed out.12 of 132 URLs checked, 4 timed out.12 of 132 URLs checked, 5 timed out.12 of 132 URLs checked, 6 timed out.12 of 132 URLs checked, 7 timed out.12 of 132 URLs checked, 8 timed out.12 of 132 URLs checked, 9 timed out.12 of 132 URLs checked, 10 timed out.12 of 132 URLs checked, 11 timed out.12 of 132 URLs checked, 12 timed out.12 of 132 URLs checked, 13 timed out.12 of 132 URLs checked, 14 timed out.12 of 132 URLs checked, 15 timed out.12 of 132 URLs checked, 16 timed out.12 of 132 URLs checked, 17 timed out.12 of 132 URLs checked, 18 timed out.12 of 132 URLs checked, 19 timed out.12 of 132 URLs checked, 20 timed out.12 of 132 URLs checked, 21 timed out.12 of 132 URLs checked, 22 timed out.12 of 132 URLs checked, 23 timed out.12 of 132 URLs checked, 24 timed out.12 of 132 URLs checked, 25 timed out.12 of 132 URLs checked, 26 timed out.12 of 132 URLs checked, 27 timed out.12 of 132 URLs checked, 28 timed out.12 of 132 URLs checked, 29 timed out.12 of 132 URLs checked, 30 timed out.12 of 132 URLs checked, 31 timed out.12 of 132 URLs checked, 32 timed out.12 of 132 URLs checked, 33 timed out.12 of 132 URLs checked, 34 timed out.12 of 132 URLs checked, 35 timed out.12 of 132 URLs checked, 36 timed out.12 of 132 URLs checked, 37 timed out.12 of 132 URLs checked, 38 timed out.12 of 132 URLs checked, 39 timed out.12 of 132 URLs checked, 40 timed out.12 of 132 URLs checked, 41 timed out.12 of 132 URLs checked, 42 timed out.12 of 132 URLs checked, 43 timed out.12 of 132 URLs checked, 44 timed out.12 of 132 URLs checked, 45 timed out.12 of 132 URLs checked, 46 timed out.12 of 132 URLs checked, 47 timed out.12 of 132 URLs checked, 48 timed out.12 of 132 URLs checked, 49 timed out.12 of 132 URLs checked, 50 timed out.12 of 132 URLs checked, 51 timed out.12 of 132 URLs checked, 52 timed out.12 of 132 URLs checked, 53 timed out.12 of 132 URLs checked, 54 timed out.12 of 132 URLs checked, 55 timed out.12 of 132 URLs checked, 56 timed out.12 of 132 URLs checked, 57 timed out.12 of 132 URLs checked, 58 timed out.12 of 132 URLs checked, 59 timed out.12 of 132 URLs checked, 60 timed out.12 of 132 URLs checked, 61 timed out.12 of 132 URLs checked, 62 timed out.12 of 132 URLs checked, 63 timed out.12 of 132 URLs checked, 64 timed out.12 of 132 URLs checked, 65 timed out.12 of 132 URLs checked, 66 timed out.12 of 132 URLs checked, 67 timed out.12 of 132 URLs checked, 68 timed out.12 of 132 URLs checked, 69 timed out.12 of 132 URLs checked, 70 timed out.12 of 132 URLs checked, 71 timed out.12 of 132 URLs checked, 72 timed out.12 of 132 URLs checked, 73 timed out.12 of 132 URLs checked, 74 timed out.12 of 132 URLs checked, 75 timed out.12 of 132 URLs checked, 76 timed out.12 of 132 URLs checked, 77 timed out.12 of 132 URLs checked, 78 timed out.12 of 132 URLs checked, 79 timed out.12 of 132 URLs checked, 80 timed out.12 of 132 URLs checked, 81 timed out.12 of 132 URLs checked, 82 timed out.12 of 132 URLs checked, 83 timed out.12 of 132 URLs checked, 84 timed out.12 of 132 URLs checked, 85 timed out.12 of 132 URLs checked, 86 timed out.12 of 132 URLs checked, 87 timed out.12 of 132 URLs checked, 88 timed out.12 of 132 URLs checked, 89 timed out.12 of 132 URLs checked, 90 timed out.12 of 132 URLs checked, 91 timed out.12 of 132 URLs checked, 92 timed out.12 of 132 URLs checked, 93 timed out.12 of 132 URLs checked, 94 timed out.12 of 132 URLs checked, 95 timed out.12 of 132 URLs checked, 96 timed out.12 of 132 URLs checked, 97 timed out.12 of 132 URLs checked, 98 timed out.12 of 132 URLs checked, 99 timed out.12 of 132 URLs checked, 100 timed out.12 of 132 URLs checked, 101 timed out.12 of 132 URLs checked, 102 timed out.12 of 132 URLs checked, 103 timed out.12 of 132 URLs checked, 104 timed out.12 of 132 URLs checked, 105 timed out.12 of 132 URLs checked, 106 timed out.12 of 132 URLs checked, 107 timed out.12 of 132 URLs checked, 108 timed out.12 of 132 URLs checked, 109 timed out.12 of 132 URLs checked, 110 timed out.12 of 132 URLs checked, 111 timed out.12 of 132 URLs checked, 112 timed out.12 of 132 URLs checked, 113 timed out.12 of 132 URLs checked, 114 timed out.12 of 132 URLs checked, 115 timed out.12 of 132 URLs checked, 116 timed out.12 of 132 URLs checked, 117 timed out.12 of 132 URLs checked, 118 timed out.12 of 132 URLs checked, 119 timed out.12 of 132 URLs checked, 120 timed out.
+
+Awesome Conferences
+===================
+
+
+
+###What makes a conference awesome?
+
+ * A [code of conduct](http://incisive.nu/2014/codes-of-conduct/) that is [explicitly mentioned and upheld](https://modelviewculture.com/pieces/a-code-of-conduct-is-not-enough). For more on this, see [this](https://modelviewculture.com/pieces/making-tech-spaces-safe-for-diverse-faces)
+ * A great line up of talks
+ * A recurring schedule
+ * Diversity; both in the talks and in the community who attend.
+ * Grants for students and minorities.
+ * Alcohol-free drink options
+ * Quiet rooms and safe space
+
+
+## Conferences
+
+
+###North American
+* [DEFCON](http://defcon.org) // [@_defcon_](https://twitter.com/_defcon_)
+* [Facebook f8](https://www.facebook.com/f8)
+* [LibrePlanet](http://libreplanet.org/wiki/LibrePlanet:Conference) // [@fsf](https://twitter.com/fsf)
+
+####New York
+
+###South American
+* [Front in Bahia](http://www.frontinbahia.com.br/)
+
+###European
+* [FOSDEM](https://fosdem.org/2015/) // [@fosdem](https://twitter.com/fosdem)
+
+###Asian
+
+###Australian
+* [CampJS](http://campjs.com/) // [@campjsnews](https://twitter.com/campjsnews)
