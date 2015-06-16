@@ -1,39 +1,23 @@
 Awesome Query
 =============
-Better Selectors
-----------------
-* String
-* Regex
-* Function
-
-Options
--------
-* --verbose, -v
-* --report, -r
-* --include-timeouts, -i
-* --num-processes, -p
-* --attempts, -a
-* --timeout, -t (add 2000 to this for phantom)
-* --input, -i
-* --selector, -s
-* --output, -o
-
-Speed
+To Do
 -----
-* Don't restart PhantomJS
-* Get suggestions
+* Documentation (readme & annotations)
+* Tests
+* Implement functionality described by yargs
+* Only output ansi charachters
+* Anonomously collect usage stats
 
-Qaulity
--------
-* Create PhantomContainer class
+Examples
+--------
 
-Deployment
-----------
-* Phantom shouldn't have to be installed globally
-
-Other
------
-* Output result to file instead of terminal
+```js
+module.exports = function(page) {
+  return page.text.match(/\w+/g).some(function(word) {
+    return new require('levenshtein')(word, 'reactive').distance < 4;
+  })
+});
+```
 
 License
 -------

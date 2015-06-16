@@ -1,0 +1,1 @@
+spawn('phantomjs', [path.join(__dirname, 'phantom.js'), url[0], '--load-images=no']);
