@@ -6,14 +6,10 @@
   "dependencies": {
     "charm": "^1.0.0",
     "lodash": "^3.9.3",
-    "node-phantom": "^0.2.5",
     "phantomjs": "^1.9.17",
     "phridge": "^1.1.0",
     "promise-queue": "^2.1.1",
     "yargs": "^3.10.0"
-  },
-  "devDependencies": {
-    "node-monkey": "^0.2.15"
   },
   "repository": {
     "type": "git",

@@ -8,6 +8,8 @@ To Do
 * Only output ansi charachters
 * Anonomously collect usage stats
 * If a phantom instance crashes it should be restarted and not affect the program
+* Bin commands
+* Find a "10 things to do before you publish a module to NPM" thing
 
 Examples
 --------
