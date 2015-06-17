@@ -1,7 +1,5 @@
 /* eslint vars-on-top:0, no-shadow:0, no-use-before-define:0, no-reserved-keys:0 */
 
-// require('node-monkey').start({host: '127.0.0.1', port: '50500'});
-
 var yargs = require('yargs')
   .option('v', {alias: 'verbose', boolean: true})
   .option('r', {alias: 'reject-failures', boolean: true})
@@ -69,6 +67,7 @@ new Promise(function (resolve) {
       } catch (e) {
         urlIsOk = !argv['reject-failures'];
       }
+
       if (!urlIsOk) {
         lines[url.data.lineNumber] = null;
       }
@@ -97,15 +96,24 @@ new Promise(function (resolve) {
     }
 
     console.log('Complete. Output saved to ' + argv._[2]);
-  });
 
-  browsers.forEach(function (b) {
-    b.kill();
+    handleExit();
   });
-
-  // the killing and the exiting don't work
-  process.exit();
 });
+
+process.on('exit', handleExit);
+
+function handleExit() {
+  try {
+    phridge.disposeAll().then(function () {
+      process.exit(0);
+    }).catch(function (err) {
+      throw err;
+    });
+  } catch (e) {
+    process.exit(0);
+  }
+}
 
 function PhantomContainer() {
   var self = this;
@@ -127,35 +135,56 @@ function PhantomContainer() {
 
       self.available = false;
 
-      self.phantom.run(url.address, argv.timeout / 4, function (address, loadDuration, resolve) {
-        var page = require('webpage').create();
-        page.onError = function () {
+      var page = self.phantom.createPage();
+      page.run(url.address, argv.timeout / 4, function (address, loadDuration, resolve, reject) {
+        var self = this;
+        this.onError = function () {
           // Do nothing
         };
-        page.open(address, function () {
+
+        this.open(address, function () {
           setTimeout(function () {
-            var result = page.evaluate(function () {
-              var meta = Array.prototype.slice.call(document.getElementsByTagName('meta') || []).map(function (tag) {
-                return {name: tag.name || tag.getAttribute('property') || tag.httpEquiv, content: tag.content};
+            var result;
+            try {
+              result = self.evaluate(function () {
+                var meta = Array.prototype.slice.call(document.getElementsByTagName('meta') || []).map(function (tag) {
+                  return {name: tag.name || tag.getAttribute('property') || tag.httpEquiv, content: tag.content};
+                });
+
+                return {
+                  text: document.body.innerText,
+                  html: document.body.innerHTML,
+                  meta: meta
+                };
               });
+            } catch (e) {
+              return reject({name: 'NonExistentPageError', message: 'Page does not exist or was deleted'});
+            }
 
-              return {
-                text: document.body.innerText,
-                html: document.body.innerHTML,
-                meta: meta
-              };
-            });
-
-            resolve(result);
+            if (result === null || !result.html) {
+              reject({name: 'InvalidDataError', message: address + ' returned null content'});
+            } else {
+              resolve(result);
+            }
           }, loadDuration);
         });
       }).then(function (data) {
-        resolve(data);
+        page.dispose().then(function () {
+          resolve(data);
+        });
+      }).catch(function (err) {
+        reject(err);
       });
 
       setTimeout(function () {
         self.available = true;
-        reject({name: 'TimeoutError', message: url.address + ' timed out'});
+        if (page.phantom) {
+          page.dispose().then(function () {
+            reject({name: 'TimeoutError', message: url.address + ' timed out'});
+          });
+        } else {
+          reject({name: 'TimeoutError', message: url.address + ' timed out'});
+        }
       }, argv.timeout);
     }).then(function (data) {
       self.available = true;
@@ -189,10 +218,10 @@ function FetchPromise(url, browsers) {
         url.attempts -= 1;
 
         if (url.attempts > 0) {
-          logger(url, 'retrying');
+          logger(url, 'retrying', err);
           resolveFetchPromise();
         } else {
-          logger(url, 'failed');
+          logger(url, 'failed', err);
           reject(err);
         }
       });
@@ -218,7 +247,7 @@ function Logger(queue) {
     process.stdout.write('(0/' + urls.length + ' done)\n');
   }
 
-  function log(url, action) {
+  function log(url, action, err) {
     if (action === 'completed' || action === 'failed') {
       queue.completedLength += 1;
     }
@@ -235,6 +264,9 @@ function Logger(queue) {
         process.stdout.write('failed, retrying (' + url.attempts + ' attempts remaining) ');
       } else {
         process.stdout.write(action + ' ');
+      }
+      if (err) {
+        process.stdout.write('[' + (err.name || err.constructor.name) + ', ' + err.message + '] ');
       }
     } else if (process.stdout.isTTY) {
       charm.up(1);
@@ -270,7 +302,7 @@ function validate() {
   // If !selector-is-module ensure it is valid regex
   // -s, -i & -o are one of 4 settings
   // Pipe is enabled for one or zero options
-  // 2 or 3 sequential paramters depending on whether pipe is enabled for one of them
+  // 1 to 3 sequential paramters depending on whether pipe is enabled, and stdout are enabled
 
   return true;
 }

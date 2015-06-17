@@ -7,6 +7,7 @@ To Do
 * Implement functionality described by yargs
 * Only output ansi charachters
 * Anonomously collect usage stats
+* If a phantom instance crashes it should be restarted and not affect the program
 
 Examples
 --------
