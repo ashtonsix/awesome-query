@@ -13,7 +13,11 @@ function URL(address, data, options) {
 
   this.isOk = function () {
     try {
-      return this.page.text.indexOf(options.regex) !== -1;
+      if (options.selector.constructor.name === 'RegExp') {
+        return !!this.page.text.match(options.selector);
+      }
+
+      return options.selector(this.page);
     } catch (e) {
       return options.errorsAreOk;
     }

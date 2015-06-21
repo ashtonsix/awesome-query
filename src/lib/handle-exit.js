@@ -1,3 +1,5 @@
+var phridge = require('phridge');
+
 function handleExit() {
   try {
     phridge.disposeAll().then(function () {

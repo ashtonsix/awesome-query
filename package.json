@@ -9,6 +9,7 @@
     "phantomjs": "^1.9.17",
     "phridge": "^1.1.0",
     "promise-queue": "^2.1.1",
+    "rsvp": "^3.0.18",
     "yargs": "^3.10.0"
   },
   "repository": {

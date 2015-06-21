@@ -12,6 +12,7 @@ function PhantomContainer(options) {
     self.available = true;
   });
 
+  // This should handle more than just HTML
   this.fetch = function (url) {
     return new Promise(function (resolve, reject) {
       if (!self.available) {

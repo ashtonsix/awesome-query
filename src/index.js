@@ -1,34 +1,34 @@
 var yargs = require('yargs')
-  .option('v', {alias: 'verbose', boolean: true})
-  .option('r', {alias: 'reject-failures', boolean: true})
-  .option('m', {alias: 'selector-is-module', boolean: true,
-    describe: 'Intepret selector as node module'}) // not implemented
-  .option('u', {alias: 'urls-only', boolean: true,
+  .option('verbose', {alias: 'v', boolean: true})
+  .option('reject-failures', {alias: 'r', boolean: true})
+  .option('selector-is-module', {alias: 'm', boolean: true,
+    describe: 'Intepret selector as node module'})
+  .option('urls-only', {alias: 'u', boolean: true,
     describe: 'Remove lines without URLs'})
-  .option('t', {alias: 'timeout', default: 20000, nargs: 1,
+  .option('timeout', {alias: 't', default: 20000, nargs: 1,
     describe: '<INTEGER> how long to spend waiting for webpage to load'})
-  .option('a', {alias: 'attempts', default: 3, nargs: 1,
+  .option('attempts', {alias: 'a', default: 3, nargs: 1,
     describe: '<INTEGER> how many times to retry loading failed webpage'})
-  .option('p', {alias: 'parallelization', default: 8, nargs: 1,
+  .option('parallelization', {alias: 'p', default: 8, nargs: 1,
     describe: '<INTEGER> how many browsers should be concurrently loading webpages'})
-  .option('s', {alias: 'selector', default: 'string', nargs: 1, string: true,
-    describe: 'One of [string, url, file, pipe]'}) // not implemented
-  .option('i', {alias: 'input', default: 'file', nargs: 1,
-    describe: 'One of [string, url, file, pipe]'}) // not implemented
-  .option('o', {alias: 'output', default: 'file', nargs: 1,
+  .option('selector', {alias: 's', default: 'string', nargs: 1, string: true,
+    describe: 'One of [string, url, file, pipe]'})
+  .option('input', {alias: 'i', default: 'file', nargs: 1,
+    describe: 'One of [string, url, file, pipe]'})
+  .option('output', {alias: 'o', default: 'file', nargs: 1,
     describe: 'One of [file, stdout]'})
   .usage('Usage: <selector> <input> <output> [OPTIONS]')
-  .demand(3); // remove when validate is implemented
+  .wrap(null);
 
 var parseOptions = require('./lib/parse-options.js');
 
-if (!parseOptions.validate(yargs)) {
+if (parseOptions.validate(yargs)) {
   yargs.showHelp();
+  console.log('Error: ' + parseOptions.validate(yargs));
   process.exit();
 }
 
 var PromiseQueue = require('promise-queue');
-var phridge = require('phridge');
 var fs = require('fs');
 
 var PhantomContainer = require('./lib/phantom-container.js');
@@ -43,13 +43,13 @@ var getUrl = function (str) {
 
 process.on('exit', handleExit);
 
-parseOptions(yargs).then(main);
+parseOptions(yargs).then(main).catch(handleExit);
 
 function main(argv) {
-  var lines = fs.readFileSync(argv._[1], 'utf8').split('\n');
+  var lines = argv.input;
 
   var urls = lines.map(function (line, i) {
-    return new URL(getUrl(line), {lineNumber: i}, {attempts: argv.attempts, regex: argv._[0]});
+    return new URL(getUrl(line), {lineNumber: i}, {attempts: argv.attempts, selector: argv.selector});
   }).filter(function (url) {
     return url.address;
   });
@@ -72,12 +72,12 @@ function main(argv) {
       }).then(function (url) {
         processUrl(url);
       }).catch(function () {
-        processUrl();
+        processUrl(url);
       });
     });
 
     function processUrl(url) {
-      if (url ? !url.isOk() : argv['reject-failures']) {
+      if (url.error ? argv['reject-failures'] : !url.isOk()) {
         lines[url.data.lineNumber] = null;
       }
 
@@ -91,18 +91,17 @@ function main(argv) {
     }).join('\n');
 
     if (argv.output === 'file') {
-      fs.writeFile(argv._[2], data, function (err) {
+      fs.writeFile(argv.outputLocation, data, function (err) {
         if (err) {
           return console.error(err);
         }
 
-        console.log('\nComplete. Output saved to ' + argv._[2]);
+        console.log('\nComplete. Output saved to ' + argv.outputLocation);
 
         handleExit();
       });
     } else if (argv.output === 'stdout') {
       console.log('\n---\n' + data + '\n---');
-      console.log('\nComplete. Output saved to ' + argv._[2]);
 
       handleExit();
     }

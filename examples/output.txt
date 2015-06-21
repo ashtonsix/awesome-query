@@ -43,6 +43,7 @@ _Many of the links above are to Model View Culture's issue on events. I have lin
 * [EmberConf](http://emberconf.com/) // [@emberconf](https://twitter.com/emberconf)
 * [Facebook f8](https://www.facebook.com/f8)
 * [Forward JS](http://forwardjs.com/) // [@forwardJS](https://twitter.com/forwardJS/)
+* [Foss4g](https://2014.foss4g.org/) // [@foss4g](https://twitter.com/foss4g)
 * [Geospatial Canada](http://geospatialcanada.wbresearch.com/) // [@GeospatialCan](https://twitter.com/GeospatialCan)
 * [HTML5DevConf](http://html5devconf.com/) // [@html5devconf](https://twitter.com/html5devconf)
 * [JavaOne](https://www.oracle.com/javaone) // [@JavaOneConf](https://twitter.com/JavaOneConf)
@@ -70,7 +71,6 @@ _Many of the links above are to Model View Culture's issue on events. I have lin
 ####New York
 * [EmpireJS](http://empirejs.org) // [@EmpireJS](https://twitter.com/EmpireJS)
 * [EmpireNode](http://empirenode.org/) // [@empirenode](https://twitter.com/empirenode)
-* [QueensJS](http://www.meetup.com/QueensJS/) // [@queens_js](https://twitter.com/queens_js)
 * [WriteSpeakCode Workshop](http://www.writespeakcode.com/workshop.html) // [@WriteSpeakCode](https://www.tiwtter.com/WriteSpeakCode)  
 
 ###South American
@@ -82,7 +82,6 @@ _Many of the links above are to Model View Culture's issue on events. I have lin
 * [JSConf BR](http://jsconfbr.org) // [@jsconfbr](https://twitter.com/jsconfbr)
 * [JSConf Colombia](http://jsconf.co/) // [@jsconfco](https://twitter.com/jsconfco)
 * [RSJS](http://rsjs.org/) // [@rs_js](https://twitter.com/rs_js)
-* [RubyConf Brasil](http://www.rubyconf.com.br/) // [@rubyconfbr](https://twitter.com/rubyconfbr)
 * [RubyConf Colombia](http://www.rubyconf.co/) // [@RubyConfCo](https://twitter.com/RubyConfCo)
 
 ###European
@@ -111,6 +110,7 @@ _Many of the links above are to Model View Culture's issue on events. I have lin
 * [LXJS](http://lxjs.org) // [@LXJS](https://twitter.com/lxjs)
 * [MoscowJS](http://moscowjs.ru/) // [@moscowjs](https://twitter.com/moscowjs)
 * [Munich JavaScript UF](http://www.munichjs.org/) // [@munichjs](https://twitter.com/munichjs)
+* [ng-europe](http://ngeurope.org/) // [@ngEurope](https://twitter.com/ngEurope)
 * [NodeConf Europe](http://nodeconfeu.com/) // [@nodeconfeu](https://twitter.com/nodeconfeu)
 * [ReactEurope](http://www.react-europe.org) // [@ReactEurope](https://twitter.com/ReactEurope)
 * [RealtimeConf EU](http://realtimeconf.eu/) // [@RealtimeConfEu](https://twitter.com/RealtimeConfEu)

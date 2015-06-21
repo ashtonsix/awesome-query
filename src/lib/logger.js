@@ -2,7 +2,7 @@ function Logger(queue, options) {
   var charm = require('charm')();
   charm.pipe(process.stdout);
 
-  var previousLength = -1;
+  var previousLength = 0;
 
   queue.completedLength = 0;
 
@@ -36,7 +36,7 @@ function Logger(queue, options) {
     }
 
     if (options.verbose || process.stdout.isTTY || (
-      (queue.completedLength % 10 === 0 || queue.completedLength === options.totalUrls) &&
+      (queue.completedLength % 5 === 0 || queue.completedLength === options.totalUrls) &&
       queue.completedLength > previousLength
     )) {
       previousLength = queue.completedLength;

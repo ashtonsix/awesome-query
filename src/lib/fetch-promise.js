@@ -22,7 +22,8 @@ function FetchPromise(url, browsers, logger) {
           resolveFetchPromise();
         } else {
           logger(url, 'failed', err);
-          reject(err);
+          url.error = err;
+          reject(url);
         }
       });
     }
