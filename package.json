@@ -1,27 +1,20 @@
 {
-  "version": "0.1.0",
+  "name": "awesome-query",
+  "title": "awesome-query",
+  "version": "0.1.6",
   "description": "Query awesome lists.",
   "main": "./src/index.js",
-  "scripts": {
-    "postinstall": "./install.sh"
-  },
-  "dependencies": {
-    "charm": "^1.0.0",
-    "lodash": "^3.9.3",
-    "phantomjs": "^1.9.17",
-    "phridge": "^1.1.0",
-    "promise-queue": "^2.1.1",
-    "rsvp": "^3.0.18",
-    "yargs": "^3.10.0"
-  },
+  "homepage": "https://github.com/ashtonwar/awesome-query",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ashtonwar/awesome-query.git"
+    "url": "git://github.com/ashtonwar/awesome-query.git"
+  },
+  "scripts": {
+    "postinstall": "bash ./install.sh"
   },
   "keywords": [
     "search",
     "spider",
-    "awesome",
     "awesome",
     "list",
     "query",
@@ -32,5 +25,13 @@
   "bugs": {
     "url": "https://github.com/ashtonwar/awesome-query/issues"
   },
-  "homepage": "https://github.com/ashtonwar/awesome-query#readme",
+  "dependencies": {
+    "charm": "^1.0.0",
+    "lodash": "^3.9.3",
+    "phantomjs": "^1.9.17",
+    "phridge": "^1.1.0",
+    "promise-queue": "^2.1.1",
+    "rsvp": "^3.0.18",
+    "yargs": "^3.10.0"
+  }
 }
