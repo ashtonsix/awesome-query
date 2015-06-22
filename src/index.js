@@ -31,6 +31,7 @@ function main(selector, input, options) {
     }
 
     var queue = new PromiseQueue(options.parallelization);
+    queue.urlsCurrentlyProcessing = 0;
 
     var logger = Logger(queue,
       {verbose: options.verbose, totalUrls: urls.length, errorsAreOk: !options.rejectFailures});
@@ -48,13 +49,37 @@ function main(selector, input, options) {
       });
 
       function processUrl(url) {
-        if (url.error ? options.rejectFailures : !url.isOk()) {
-          lines[url.data.lineNumber] = null;
+        var f;
+
+        queue.urlsCurrentlyProcessing += 1;
+
+        if (url.error) {
+          f = new Promise(function (resolve) {
+            resolve(options.rejectFailures);
+          });
+        } else {
+          var isOk = url.isOk();
+
+          if (isOk.then && isOk.then.constructor.name === 'function') {
+            f = isOk;
+          } else {
+            f = new Promise(function (resolve) {
+              resolve(isOk);
+            });
+          }
         }
 
-        if ((queue.getPendingLength() + queue.getQueueLength()) === 0) {
-          resolve();
-        }
+        f.then(function (isOk) {
+          queue.urlsCurrentlyProcessing -= 1;
+
+          if (!isOk) {
+            lines[url.data.lineNumber] = null;
+          }
+
+          if ((queue.getPendingLength() + queue.getQueueLength()) === 0 && queue.urlsCurrentlyProcessing === 0) {
+            resolve();
+          }
+        });
       }
     }).then(function () {
       var data = lines.filter(function (line) {

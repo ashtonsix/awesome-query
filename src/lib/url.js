@@ -17,7 +17,7 @@ function URL(address, data, options) {
         return !!this.page.text.match(options.selector);
       }
 
-      return options.selector(this.page);
+      return options.selector.call(this, this.page);
     } catch (e) {
       return options.errorsAreOk;
     }

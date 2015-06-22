@@ -1,8 +1,7 @@
 {
-  "name": "awesome-query",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Query awesome lists.",
-  "main": "src/index.js",
+  "main": "./src/index.js",
   "scripts": {
     "postinstall": "./install.sh"
   },
@@ -34,8 +33,4 @@
     "url": "https://github.com/ashtonwar/awesome-query/issues"
   },
   "homepage": "https://github.com/ashtonwar/awesome-query#readme",
-  "devDependencies": {
-    "jquery": "^2.1.4",
-    "levenshtein": "^1.0.5"
-  }
 }

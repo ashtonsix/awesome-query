@@ -2,7 +2,6 @@
   "defaults" : {
     "verbose": false,
     "rejectFailures": false,
-    "selectorIsModule": false,
     "urlsOnly": false,
     "timeout": 20000,
     "attempts": 3,

@@ -11,15 +11,10 @@ function parseOptions(argv) {
       input: getInput(argv.input, argv._[argv.selector === 'pipe' ? 0 : 1])
     }).then(function (args) {
       var result = _.pick(
-        argv, 'verbose', 'rejectFailures', 'selectorIsModule',
-        'urlsOnly', 'timeout', 'attempts', 'parallelization'
+        argv, 'verbose', 'rejectFailures', 'urlsOnly', 'timeout', 'attempts', 'parallelization'
       );
 
-      if (argv.selectorIsModule) {
-        result.selector = requireFromString(args.selector);
-      } else {
-        result.selector = new RegExp(args.selector);
-      }
+      result.selector = new RegExp(args.selector);
 
       result.input = args.input;
 
@@ -56,7 +51,7 @@ parseOptions.validate = function (argv) {
   } if (argv.output !== 'file' && argv.output !== 'stdout') {
     return 'output method is incorrect';
   } if (argv._.length !== numberOfDesiredArguments) {
-    return 'correct number of sequential arguments';
+    return 'incorrect number of sequential arguments';
   }
 
   return null;
@@ -125,13 +120,6 @@ function getInput(fieldMethod, fieldData) {
       reject(err);
     });
   });
-}
-
-function requireFromString(src, filename) {
-  var m = new module.constructor();
-  m.paths = module.paths;
-  m._compile(src, filename);
-  return m.exports;
 }
 
 module.exports = parseOptions;

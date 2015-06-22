@@ -10,8 +10,6 @@ var parseOptions = require('../lib/parse-options.js');
 var yargs = require('yargs')
   .option('verbose', {alias: 'v', boolean: true})
   .option('reject-failures', {alias: 'r', boolean: true})
-  .option('selector-is-module', {alias: 'm', boolean: true,
-    describe: 'Intepret selector as node module'})
   .option('urls-only', {alias: 'u', boolean: true,
     describe: 'Remove lines without URLs'})
   .option('timeout', {alias: 't', default: config.defaults.timeout, nargs: 1,
