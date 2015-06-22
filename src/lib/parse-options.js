@@ -4,26 +4,31 @@ var _ = require('lodash');
 
 var PhantomContainer = require('./phantom-container.js');
 
-function parseOptions(yargs) {
-  var argv = yargs.argv;
-
+function parseOptions(argv) {
   return new Promise(function (resolve, reject) {
     RSVP.hash({
       selector: getInput(argv.selector, argv._[0]),
       input: getInput(argv.input, argv._[argv.selector === 'pipe' ? 0 : 1])
     }).then(function (args) {
-      var result = _.cloneDeep(argv);
+      var result = _.pick(
+        argv, 'verbose', 'rejectFailures', 'selectorIsModule',
+        'urlsOnly', 'timeout', 'attempts', 'parallelization'
+      );
 
-      if (argv['selector-is-module']) {
+      if (argv.selectorIsModule) {
         result.selector = requireFromString(args.selector);
       } else {
         result.selector = new RegExp(args.selector);
       }
+
       result.input = args.input;
-      if (argv.output === 'file') {
-        result.outputLocation = argv._[argv._.length - 1];
+
+      if (argv.output) {
+        result.outputMethod = argv.output;
+        if (argv.output === 'file') {
+          result.outputLocation = argv._[argv._.length - 1];
+        }
       }
-      delete result._;
 
       resolve(result);
     }).catch(function (err) {
@@ -32,8 +37,7 @@ function parseOptions(yargs) {
   });
 }
 
-parseOptions.validate = function (yargs) {
-  var argv = yargs.argv;
+parseOptions.validate = function (argv) {
   var numberOfPipedVariables = (isPipe('selector') ? 1 : 0) + (isPipe('input') ? 1 : 0);
   var numberOfDesiredArguments = (2 - numberOfPipedVariables) + (argv.output === 'file' ? 1 : 0);
 
@@ -73,7 +77,7 @@ parseOptions.validate = function (yargs) {
 
 function getInput(fieldMethod, fieldData) {
   if (fieldData && fieldData.constructor.name === 'Number') {
-    fieldData = fieldData.toString(); // eslint-disable-line
+    fieldData = fieldData.toString();
   }
 
   return new Promise(function (resolve, reject) {

@@ -38,8 +38,9 @@ function PhantomContainer(options) {
                 });
 
                 return {
+                  title: document.title,
                   text: document.body.innerText,
-                  html: document.body.innerHTML,
+                  html: document.documentElement.innerHTML,
                   meta: meta
                 };
               });

@@ -4,11 +4,8 @@ To Do
 -----
 * Documentation (readme & annotations)
 * Tests
-* Implement functionality described by yargs
-* Only output ansi charachters
 * Anonomously collect usage stats
-* If a phantom instance crashes it should be restarted and not affect the program
-* Bin commands
+* selector-as-module
 * Find a "10 things to do before you publish a module to NPM" thing
 
 Examples
